@@ -1,0 +1,1 @@
+# Simple ImagetoText Program - Tesseract
