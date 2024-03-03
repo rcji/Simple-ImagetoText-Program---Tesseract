@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple ImagetoText Program - Tesseract", "Simple ImagetoText Program - Tesseract\Simple ImagetoText Program - Tesseract.csproj", "{6573D08F-E895-4B8A-A3AB-1947A23F855B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6573D08F-E895-4B8A-A3AB-1947A23F855B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6573D08F-E895-4B8A-A3AB-1947A23F855B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6573D08F-E895-4B8A-A3AB-1947A23F855B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6573D08F-E895-4B8A-A3AB-1947A23F855B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {390FF0C6-A937-4E0A-A367-5C40B6A34523}
+	EndGlobalSection
+EndGlobal
