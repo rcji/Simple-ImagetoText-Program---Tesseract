@@ -32,19 +32,26 @@ namespace Simple_ImagetoText_Program___Tesseract
 
             // make sure to change the path to the tessdata folder to your own path
             //you need to download the tessdata folder from the tesseract github page "https://github.com/tesseract-ocr/tessdata"
-            using (var engine = new TesseractEngine(@"C:\Users\Predator\Source\Repos\tessdata", "eng", EngineMode.Default))
+            try
             {
-                using (var img = Pix.LoadFromFile(ofd.FileName))
+                using (var engine = new TesseractEngine(@"C:\Users\Predator\Source\Repos\tessdata", "eng", EngineMode.Default))
                 {
-                    using (var page = engine.Process(img))
+                    using (var img = Pix.LoadFromFile(ofd.FileName))
                     {
-                        
-                        var text = page.GetText();
-                        
-                        textBox.Text = text;
+                        using (var page = engine.Process(img))
+                        {
+
+                            var text = page.GetText();
+
+                            textBox.Text = text;
+                        }
                     }
                 }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
+
             addressTextBox.Text = ofd.FileName;
             fileNameTextBox.Text = ofd.SafeFileName;
             copyTextButton.Text = "Copy Text to Clipboard";
@@ -52,8 +59,14 @@ namespace Simple_ImagetoText_Program___Tesseract
 
         private void copyTextButton_Click(object sender, EventArgs e)
         {
-            copyTextButton.Text = "Copied!";
-            Clipboard.SetText(textBox.Text);
+            try
+            {
+                copyTextButton.Text = "Copied!";
+                Clipboard.SetText(textBox.Text);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 
